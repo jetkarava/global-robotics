@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalRobotics.com - Pioneering Planetary Research Through Robotics</title>
+    <link rel="icon" href="public/satellite.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+    
+    <!-- Animated Background -->
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Flying Rocket -->
+    <div class="flying-rocket">
+        <div class="rocket">
+            <div class="rocket-body">
+                <div class="rocket-nose"></div>
+                <div class="rocket-middle"></div>
+                <div class="rocket-fins">
+                    <div class="fin left"></div>
+                    <div class="fin right"></div>
+                </div>
+                <div class="rocket-flame">
+                    <div class="flame flame1"></div>
+                    <div class="flame flame2"></div>
+                    <div class="flame flame3"></div>
+                </div>
+            </div>
+            <div class="rocket-trail"></div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-rocket">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="loading-text">
+                <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-satellite nav-icon"></i>
+                <span class="nav-title">Global Robotics</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#usecase" class="nav-link">Use Cases</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#technology" class="mobile-nav-link">Technology</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#usecase" class="mobile-nav-link">Use Cases</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-objects">
+                <div class="floating-satellite"></div>
+                <div class="floating-planet"></div>
+                <div class="floating-asteroid"></div>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-animation">
+                <div class="satellite-container">
+                    <div class="satellite-wrapper">
+                        <img src="public/satellite.png" 
+                             alt="Robotic Satellite in Space" class="satellite-image">
+                        <div class="satellite-glow"></div>
+                        <div class="orbit-ring"></div>
+                        <div class="orbit-ring orbit-ring-2"></div>
+                    </div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-word">Global</span>
+                    <span class="title-word">Robotics</span>
+                </h1>
+                <p class="hero-subtitle">Pioneering Planetary Research Through Robotics.</p>
+                <button class="cta-button" onclick="scrollToSection('about')">
+                    <span class="button-text">Explore Our Mission</span>
+                    <i class="fas fa-arrow-right button-icon"></i>
+                    <div class="button-glow"></div>
+                </button>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated-title">About Global Robotics</h2>
+                <p class="section-subtitle">Leading the future of space exploration through innovative robotic satellite technology</p>
+            </div>
+
+            <div class="mission-vision">
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title blue">Our Mission</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>To advance planetary research through cutting-edge robotic satellites that push the boundaries of space exploration and scientific discovery.</p>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title blue">Our Vision</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>To become the leading provider of autonomous robotic systems for deep space research, enabling humanity to unlock the mysteries of our solar system and beyond.</p>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Company Structure -->
+            <div class="team-structure">
+                <h3 class="subsection-title animated-title">Our Team Structure</h3>
+                <div class="team-grid">
+                    <div class="team-card hover-lift">
+                        <div class="team-icon-wrapper">
+                            <i class="fas fa-users team-icon"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h4>CEO</h4>
+                        <p>Strategic Leadership</p>
+                    </div>
+                    <div class="team-card hover-lift">
+                        <div class="team-icon-wrapper">
+                            <i class="fas fa-cogs team-icon"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h4>Engineers</h4>
+                        <p>Hardware Design</p>
+                    </div>
+                    <div class="team-card hover-lift">
+                        <div class="team-icon-wrapper">
+                            <i class="fas fa-code team-icon"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h4>Software Team</h4>
+                        <p>AI & Control Systems</p>
+                    </div>
+                    <div class="team-card hover-lift">
+                        <div class="team-icon-wrapper">
+                            <i class="fas fa-satellite-dish team-icon"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h4>Telemetry Team</h4>
+                        <p>Communication Systems</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-section">
+                <h3 class="subsection-title animated-title">Project Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check"></i>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        <h4>Design</h4>
+                        <span class="timeline-badge completed">completed</span>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check"></i>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        <h4>Testing</h4>
+                        <span class="timeline-badge completed">completed</span>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item current">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check"></i>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        <h4>Launch</h4>
+                        <span class="timeline-badge current">current</span>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item upcoming">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check"></i>
+                            <div class="timeline-glow"></div>
+                        </div>
+                        <h4>Deep Space</h4>
+                        <span class="timeline-badge upcoming">upcoming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated-title">Advanced Technology</h2>
+                <p class="section-subtitle">Our satellites are equipped with state-of-the-art instruments for comprehensive planetary research</p>
+            </div>
+
+            <div class="tech-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="cameras">
+                        <i class="fas fa-eye"></i>
+                        <span>Cameras</span>
+                    </button>
+                    <button class="tab-btn" data-tab="magnetometer">
+                        <i class="fas fa-magnet"></i>
+                        <span>Magnetometer</span>
+                    </button>
+                    <button class="tab-btn" data-tab="gravimeter">
+                        <i class="fas fa-crosshairs"></i>
+                        <span>Gravimeter</span>
+                    </button>
+                    <button class="tab-btn" data-tab="radio">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Radio</span>
+                    </button>
+                    <button class="tab-btn" data-tab="propulsion">
+                        <i class="fas fa-rocket"></i>
+                        <span>Propulsion</span>
+                    </button>
+                    <button class="tab-btn" data-tab="power">
+                        <i class="fas fa-battery-full"></i>
+                        <span>Power</span>
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel active" id="cameras">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-eye tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>Visual/Infrared/Ultraviolet Cameras</h3>
+                            </div>
+                            <p>Multi-spectral imaging systems capable of capturing detailed planetary surfaces across visible, infrared, and ultraviolet spectrums for comprehensive geological analysis.</p>
+                            <div class="tech-features">
+                                <div class="feature hover-lift">
+                                    <h4>Visual Spectrum</h4>
+                                    <p>High-resolution surface mapping</p>
+                                </div>
+                                <div class="feature hover-lift">
+                                    <h4>Infrared</h4>
+                                    <p>Thermal analysis and composition</p>
+                                </div>
+                                <div class="feature hover-lift">
+                                    <h4>Ultraviolet</h4>
+                                    <p>Atmospheric studies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="magnetometer">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-magnet tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>Magnetometer</h3>
+                            </div>
+                            <p>Precision magnetic field measurement instrument for studying planetary magnetic fields, core composition, and electromagnetic interactions with solar wind.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="gravimeter">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-crosshairs tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>Gravimeter</h3>
+                            </div>
+                            <p>Ultra-sensitive gravitational field detector for mapping subsurface structures, density variations, and internal planetary composition.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="radio">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-broadcast-tower tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>Radio Detector</h3>
+                            </div>
+                            <p>Advanced radio frequency analysis system for atmospheric studies, communication relay, and detection of electromagnetic phenomena.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="propulsion">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-rocket tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>Propellant-less Propulsion</h3>
+                            </div>
+                            <p>Revolutionary ion drive and solar sail hybrid system enabling long-duration missions without traditional fuel limitations.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="power">
+                        <div class="tech-card hover-lift">
+                            <div class="tech-header">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fas fa-battery-full tech-icon"></i>
+                                    <div class="tech-icon-glow"></div>
+                                </div>
+                                <h3>RTG and Battery Bank</h3>
+                            </div>
+                            <p>Radioisotope Thermoelectric Generator combined with advanced lithium-ion battery systems for reliable power generation in deep space environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated-title">Project Details</h2>
+                <p class="section-subtitle">Comprehensive analysis of challenges, solutions, and opportunities</p>
+            </div>
+
+            <div class="problems-solutions">
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title red">Challenges & Limitations</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="list-item">
+                            <div class="bullet red"></div>
+                            <span>Budget constraints for R&D</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet red"></div>
+                            <span>Dependency on Rocket Lab partnerships</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet red"></div>
+                            <span>Regulatory approval processes</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet red"></div>
+                            <span>Deep space communication delays</span>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title green">Solutions & Strategies</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="list-item">
+                            <div class="bullet green"></div>
+                            <span>Strategic government partnerships</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet green"></div>
+                            <span>Research grants and funding</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet green"></div>
+                            <span>Modular design optimization</span>
+                        </div>
+                        <div class="list-item">
+                            <div class="bullet green"></div>
+                            <span>AI-driven autonomous systems</span>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Budget Breakdown -->
+            <div class="budget-section">
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title">Budget Allocation</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="budget-item">
+                            <div class="budget-info">
+                                <span>Research & Development</span>
+                                <span class="budget-amount">$15.2M</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="35"></div>
+                            </div>
+                        </div>
+                        <div class="budget-item">
+                            <div class="budget-info">
+                                <span>Manufacturing</span>
+                                <span class="budget-amount">$10.8M</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="25"></div>
+                            </div>
+                        </div>
+                        <div class="budget-item">
+                            <div class="budget-info">
+                                <span>Launch Services</span>
+                                <span class="budget-amount">$8.6M</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="20"></div>
+                            </div>
+                        </div>
+                        <div class="budget-item">
+                            <div class="budget-info">
+                                <span>Operations</span>
+                                <span class="budget-amount">$6.5M</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="15"></div>
+                            </div>
+                        </div>
+                        <div class="budget-item">
+                            <div class="budget-info">
+                                <span>Contingency</span>
+                                <span class="budget-amount">$2.2M</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <!-- Opportunities & Risks -->
+            <div class="opportunities-risks">
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title blue">Selling Points</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>• Cutting-edge technology</li>
+                            <li>• Cost-effective solutions</li>
+                            <li>• Proven track record</li>
+                            <li>• Scalable architecture</li>
+                        </ul>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title green">Opportunities</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>• Growing space market</li>
+                            <li>• Government contracts</li>
+                            <li>• International partnerships</li>
+                            <li>• Commercial applications</li>
+                        </ul>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title yellow">Risk Factors</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>• Technical failures</li>
+                            <li>• Market competition</li>
+                            <li>• Regulatory changes</li>
+                            <li>• Launch delays</li>
+                        </ul>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case Section -->
+    <section id="usecase" class="usecase-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated-title">Mission Workflow</h2>
+                <p class="section-subtitle">From concept to deep space exploration - our comprehensive mission process</p>
+            </div>
+
+            <!-- Activity Diagram -->
+            <div class="workflow-diagram">
+                <div class="workflow-step hover-lift">
+                    <div class="workflow-icon">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="workflow-glow"></div>
+                    </div>
+                    <h3>Government Approval</h3>
+                    <p>Regulatory clearance and permits</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step hover-lift">
+                    <div class="workflow-icon">
+                        <i class="fas fa-rocket"></i>
+                        <div class="workflow-glow"></div>
+                    </div>
+                    <h3>Rocket Lab Partnership</h3>
+                    <p>Launch vehicle coordination</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step hover-lift">
+                    <div class="workflow-icon">
+                        <i class="fas fa-satellite"></i>
+                        <div class="workflow-glow"></div>
+                    </div>
+                    <h3>Satellite Integration</h3>
+                    <p>Final assembly and testing</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step hover-lift">
+                    <div class="workflow-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <div class="workflow-glow"></div>
+                    </div>
+                    <h3>Launch & Testing</h3>
+                    <p>Deployment and communication</p>
+                </div>
+                <div class="workflow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="workflow-step hover-lift">
+                    <div class="workflow-icon">
+                        <i class="fas fa-crosshairs"></i>
+                        <div class="workflow-glow"></div>
+                    </div>
+                    <h3>Mission to Moon</h3>
+                    <p>Deep space operations</p>
+                </div>
+            </div>
+
+            <!-- Stakeholder Interactions -->
+            <div class="stakeholders-section">
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title">Stakeholder Interactions</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="stakeholders-grid">
+                            <div class="stakeholder hover-lift">
+                                <div class="stakeholder-icon-wrapper">
+                                    <i class="fas fa-users stakeholder-icon"></i>
+                                    <div class="stakeholder-glow"></div>
+                                </div>
+                                <h4>Global Robotics Staff</h4>
+                                <p>Mission Control & Operations</p>
+                            </div>
+                            <div class="stakeholder hover-lift">
+                                <div class="stakeholder-icon-wrapper">
+                                    <i class="fas fa-rocket stakeholder-icon"></i>
+                                    <div class="stakeholder-glow"></div>
+                                </div>
+                                <h4>Rocket Lab</h4>
+                                <p>Launch Services Provider</p>
+                            </div>
+                            <div class="stakeholder hover-lift">
+                                <div class="stakeholder-icon-wrapper">
+                                    <i class="fas fa-satellite stakeholder-icon"></i>
+                                    <div class="stakeholder-glow"></div>
+                                </div>
+                                <h4>Satellite Systems</h4>
+                                <p>Data Collection & Transmission</p>
+                            </div>
+                            <div class="stakeholder hover-lift">
+                                <div class="stakeholder-icon-wrapper">
+                                    <i class="fas fa-crosshairs stakeholder-icon"></i>
+                                    <div class="stakeholder-glow"></div>
+                                </div>
+                                <h4>Space Agencies</h4>
+                                <p>Oversight & Collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated-title">Join Our Mission</h2>
+                <p class="section-subtitle">Ready to collaborate on the future of space exploration? Get in touch with our team.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="card hover-lift">
+                    <div class="card-header">
+                        <h3 class="card-title">Collaboration Contact Form</h3>
+                        <p class="card-description">Tell us about your project and how we can work together</p>
+                    </div>
+                    <div class="card-content">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea placeholder="Tell us about your project or collaboration ideas..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <div class="button-glow"></div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="card hover-lift">
+                        <div class="card-header">
+                            <h3 class="card-title">Contact Information</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <span>contact@globalrobotics.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <span>+64 9 801 1234</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <span>Level 5, 12 Orbit Drive Albany, Auckland 0632 New Zealand</span>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="card hover-lift">
+                        <div class="card-header">
+                            <h3 class="card-title">Support & Partnerships</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>We're always looking for innovative partners, researchers, and organizations who share our vision of advancing space exploration.</p>
+                            <button class="partnership-btn">
+                                <span>Partnership Opportunities</span>
+                                <div class="button-glow"></div>
+                            </button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-satellite footer-icon"></i>
+                    <span class="footer-title">Global-Robotics.com</span>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <div class="social-glow"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global Robotics. All rights reserved. Pioneering the future of space exploration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
