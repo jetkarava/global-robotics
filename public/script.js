@@ -1,6 +1,6 @@
 // Enhanced JavaScript with advanced animations and interactions
 document.addEventListener("DOMContentLoaded", () => {
-    // Particle Background System
+  // Particle Background System
   const canvas = document.getElementById("particleCanvas")
   const ctx = canvas.getContext("2d")
 
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start animation
   animateParticles()
-  
+
   // Enhanced loading screen with better cleanup
   const loadingScreen = document.querySelector(".loading-screen")
   const loadingProgress = document.querySelector(".loading-progress")
